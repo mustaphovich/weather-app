@@ -1,5 +1,3 @@
-console.log('client side javascriot file is loaded')
-
 
 fetch('http://localhost:3000/weather?address=beirut').then((response)=>{
        response.json().then((data)=>{
