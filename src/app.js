@@ -5,6 +5,7 @@ const geocode = require('./utils/geocode')
 const forecast = require('./utils/forecast')
 
 const app=express()
+const port =process.envy.PORT || 3000
 // Define paths for Express config
 const PublicDirectoryPath = path.join(__dirname,'../public')
 const viewsPath = path.join(__dirname,'../templates/views')
@@ -76,6 +77,6 @@ app.get('/help',(req,res)=>{
         errormessage : '404 page not found'
     })
   })
-app.listen(3000,()=>{
-    console.log('server is runnin on port 3000')
+app.listen(port,()=>{
+    console.log('server is runnin on port'+ port)
 })
